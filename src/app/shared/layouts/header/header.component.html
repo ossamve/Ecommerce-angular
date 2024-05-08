@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">Disick Man</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a
+            routerLink=""
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Language</a
+          >
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="">ENG</a>
+            <a class="dropdown-item" routerLink="">FRA</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">About us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/buyer-dashboard">Order B</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/buyer-dashboard">All Order A</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/seller/product">Product S</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/product">All Product A</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/user">Users A</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Contact us</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a routerLink="/sign-in" class="nav-link">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/sign-up" class="nav-link">Sign Up</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a routerLink="/my-profile" class="nav-link sim-pointer">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="" class="nav-link sim-pointer">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
