@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,31 @@ import { RouterLink } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
 
+  logged_in: boolean = false;
+  language: string = 'english';
+  user_role!: any;
+
+  constructor(private router:Router) { }
+  
+  ngOnInit(): void {
+    
+  }
+
+  ngDoCheck() {
+    this.user_role = sessionStorage.getItem("role");
+    // console.log(this.user_role);
+    const user_session_id = sessionStorage.getItem("user_session_id");
+    if (user_session_id) {
+      this.logged_in = true;
+    }
+  }
+
+  logout() {
+    sessionStorage.removeItem("usser_session_id");
+    sessionStorage.removeItem("role");
+    this.router.navigate(['/sign-in']);
+    location.reload;
+  }
 }
